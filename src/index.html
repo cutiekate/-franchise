@@ -3,11 +3,114 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Title</title>
+    <title>Акции/Франшиза</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="./styles/main.css">
   </head>
   <body>
-    <h1>Hello Mate Academy</h1>
+    <header class="container header">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <h1 class="header__head"><span class="red">Франшиза</span> v/s <span class="blue">Акции</span>
+              На чем выгоднее зарабатывать?</h1>
+              <p>Бизнес по франшизе стал довольно популярен 
+                в последнее время. Сегодня мы сравним, что выгоднее, инвестирование в акции 
+                или открытие франшизы.</p>
+          </div>
+          <div class="col">
+            <form class="section-registration__form form">
+              <div class="form-input">
+                <input
+                class="form__input form__input--user-img section-registration__input"
+                type="text" id="name-3"
+                placeholder="Введите имя"
+                required>
+                <span class="msg-help-3 name-span-3" style="display:none;">Укажите имя, что бы мы знали как обращаться к Вам</span>
+                <input
+                class="form__input form__input--email-img section-registration__input"
+                type="email" id="mail-3"
+                placeholder="E-mail"
+                pattern="^[-._A-Za-z0-9]+@(?:[a-z0-9][-a-z0-9]+\.)+[a-z]{2,6}$"
+                required>
+                <span class="msg-help-3 mail-span-3" style="display:none;">Укажите Ваш реальный Email для отправки списка</span>
+                <input
+                type="hidden"
+                id="last_name-3"
+                value=" ">
+                <input
+                type="hidden"
+                id="ip-3"
+                value="<?= $_SERVER['REMOTE_ADDR']; ?>">
+                <input
+                type="hidden"
+                id="country-3"
+                value="">
+                <input
+                type="hidden"
+                id="prefix-3"
+                value="">
+                <input
+                type="hidden"
+                id="lang-3"
+                value="RU">
+                <input
+                type="hidden"
+                name="utm_source"
+                id="utm_source-3"
+                value="<?= $_GET['utm_source']; ?>">
+                <input
+                type="hidden"
+                name="utm_medium"
+                id="utm_medium-3"
+                value="<?=  $_GET['utm_medium']; ?>">
+                <input
+                type="hidden"
+                name="utm_campaign"
+                id="utm_campaign-3"
+                value="<?= $_GET['utm_campaign']; ?>">
+                <input
+                type="hidden"
+                name="utm_term"
+                id="utm_term-3"
+                value="<?= $_GET['utm_term'];?>">
+                <input
+                type="hidden"
+                id="utm_content-3"
+                value="<?= $_GET['utm_content']; ?>">
+                <label for="phone-3">
+                  <input
+                  class="form__input form__input--phone-img section-registration__input"
+                  type="tel"
+                  placeholder="Телефон"
+                  id="phone-3"
+                  maxlength="16"
+                  required>
+                  <span class="msg-help-3 tel-span-3" style="display:none;">Укажите номер в международном формате</span>
+                  <span id="error-msg-3" class="hide"></span>
+                </label>
+              </div>
+              <div class="form-button">
+                  <button
+                  class="form__button section-registration__button"
+                  type="submit"
+                  id="button-3"
+                  class="sub btn_yellow">
+                      <span>Получить курс</span>
+                  </button>
+                  <p class="msg"></p>
+              </div>
+          </form>
+          </div>
+        </div>
+        
+
+      </div>
+    </header>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     <script type="text/javascript" src="scripts/main.js"></script>
   </body>
 </html>

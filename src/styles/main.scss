@@ -1,7 +1,16 @@
 @import "utils";
 @import "fonts";
 @import "typography";
+@import "header";
 
 body {
-  background: $c-gray;
+ background: $white;
+}
+
+.red {
+  color: $red;
+}
+
+.blue {
+  color: $blue;
 }
