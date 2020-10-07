@@ -9,26 +9,33 @@
   </head>
   <body>
     <header class="container header">
-      <div class="container">
+      <div class="header__bg">
+        <div class="header__img1"></div>
+        <div class="header__img2"></div>
+      </div>
+      <div class="container header__content">
         <div class="row">
-          <div class="col">
+          <div class="col header__content-col">
             <h1 class="header__head"><span class="red">Франшиза</span> v/s <span class="blue">Акции</span>
               На чем выгоднее зарабатывать?</h1>
-              <p>Бизнес по франшизе стал довольно популярен 
+              <p class="header__desc">Бизнес по франшизе стал довольно популярен 
                 в последнее время. Сегодня мы сравним, что выгоднее, инвестирование в акции 
                 или открытие франшизы.</p>
           </div>
-          <div class="col">
-            <form class="section-registration__form form">
-              <div class="form-input">
+          <div class="col header__content-col">
+            <form class=" header__form form">
+              <h3 class="form__header">Заполните короткую форму 
+                и наслаждайтесь пассивным заработком
+              </h3>
+              <div class="form__inputs">
                 <input
-                class="form__input form__input--user-img section-registration__input"
+                class="form__input form__input--user-img"
                 type="text" id="name-3"
                 placeholder="Введите имя"
                 required>
                 <span class="msg-help-3 name-span-3" style="display:none;">Укажите имя, что бы мы знали как обращаться к Вам</span>
                 <input
-                class="form__input form__input--email-img section-registration__input"
+                class="form__input form__input--email-img"
                 type="email" id="mail-3"
                 placeholder="E-mail"
                 pattern="^[-._A-Za-z0-9]+@(?:[a-z0-9][-a-z0-9]+\.)+[a-z]{2,6}$"
@@ -80,7 +87,7 @@
                 value="<?= $_GET['utm_content']; ?>">
                 <label for="phone-3">
                   <input
-                  class="form__input form__input--phone-img section-registration__input"
+                  class="form__input form__input--phone-img"
                   type="tel"
                   placeholder="Телефон"
                   id="phone-3"
@@ -90,13 +97,13 @@
                   <span id="error-msg-3" class="hide"></span>
                 </label>
               </div>
-              <div class="form-button">
+              <div>
                   <button
-                  class="form__button section-registration__button"
+                  class="form__button"
                   type="submit"
                   id="button-3"
                   class="sub btn_yellow">
-                      <span>Получить курс</span>
+                      <span>СКАЧАТЬ БЕСПЛАТНО</span>
                   </button>
                   <p class="msg"></p>
               </div>
@@ -107,6 +114,159 @@
 
       </div>
     </header>
+    <section class="container franchise">
+      <div class="container">
+        <div class="row franchise__bg">
+          <h2 class="franchise__header">Франшиза</h2>
+          <p class="franchise__desc">Франшиза - своего рода, это договор между фирмой и клиентом на приобретение последним, права использовать название и продукцию компании. В зависимости от условий договора, бренд может помочь с обучением, наймом персонала, оборудованием и прочим. </p>
+        </div>
+
+      </div>
+    </section>
+    <section class="container popular">
+      <div class="container">
+        <div class="row">
+          <h2 class="popular__header">Самые популярные виды франшиз:</h2>
+        </div>
+        <div class="row">
+          <div class="col popular__item1">
+            <p class="popular__desc"><span>Сфера услуг</span> - сюда относиться открытие мест общественного питания, тренажерных залов и т.д.
+              сюда относиться открытие мест общественного питания</p>
+          </div>
+          <div class="col">
+            <img class="popular__img" src="images/popular-1.png">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col popular__item2">
+            <p class="popular__desc"><span>Товарная</span> - продажа продукции под именем фирмы.
+              общественного питания, тренажерных залов и т.д.
+              сюда относиться открытие мест общественного </p>
+          </div>
+          <div class="col">
+            <img class="popular__img" src="images/popular-2.png">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col popular__item3">
+            <p class="popular__desc"><span>Производительная </span>- создания товара, который полностью соответствует продукции лейбла.
+              общественного питания, тренажерных залов и т.д.</p>
+          </div>
+          <div class="col">
+            <img class="popular__img" src="images/popular-3.png">
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="container shares">
+      <div class="container">
+        <div class="row shares__bg">
+          <h2 class="shares__header">Акции компаний</h2>
+          <p class="shares__desc">Акции - это бумаги, которые обеспечивают долю в компании. В свою очередь, фирма получает финансы для своего дальнейшего развития. Акционер регулярно получает дивиденды (определенную процент прибыли компании), их размер зависит от количества купленных бумаг. </p>
+        </div>
+      </div>
+    </section>
+    <section class="container species">
+      <div class="container">
+        <div class="row">
+          <h3 class="species__header">Виды акций:</h3>
+        </div>
+        <div class="row">
+          <div class="col">
+            <img class="species__img" src="images/species-img1.svg">
+          </div>
+          <div class="col species__desc1">
+            <p class="species__text"><span>Обыкновенные</span>- держатели могут принимать участие в собраниях, но у них нет привилегий при распределении дивидендов</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <img class="species__img" src="images/species-img2.svg">
+          </div>
+          <div class="col species__desc2">
+            <p class="species__text"><span>Привилегированные</span> - владельцы бумаг не могут участвовать в собраниях, но у них есть преимущество при выплате дивидендов</p>
+          </div>
+        </div>
+        
+      </div>
+    </section>
+    <section class="container benefits">
+      <div class="container">
+        <div class="row">
+          <h2 class="benefits__header">Преимущества</h2>
+        </div>
+        <div class="row">
+          <div class="col benefits__img">
+            <img src="images/benefits-img.png">
+            <div class="benefits__plus">
+              +
+            </div>
+          </div>
+          <div class="col benefits__red">
+            <h3>Франшиза</h3>
+            <p>Готовый бизнес-план и стандарты</p>
+            <p>Экономия на рекламе, так как компания сама этим занимается</p>
+            <p>Менее рискованно, чем открытие собственного бизнеса</p>
+          </div>
+          <div class="col benefits__blue">
+            <h3>Акции</h3>
+            <p>Пассивный доход</p>
+            <p>Минимальные риски</p>
+            <p>Большой заработок от продажи акций, когда цена на них вырастет и регулярные дивиденды</p>
+            <div class="benefits__plus benefits__plus--blue">
+              +
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="limitations">
+      <div class="container">
+        <div class="row">
+          <h2 class="limitations__header">Недостатки</h2>
+        </div>
+        <div class="row">
+          <div class="col limitations__img">
+            <img src="images/limitation-img.png">
+            <div class="limitations__minus">
+              -
+            </div>
+          </div>
+          <div class="col limitations__red">
+            <h3>Франшиза</h3>
+            <p>Множество взносов, платежей и отчислений от продаж</p>
+            <p>Строгий контроль за соблюдением всех оговоренных деталей</p>
+            <p>Ограничение рамками лейбла, нельзя вносить собственные глобальные изменения</p>
+          </div>
+          <div class="col limitations__blue">
+            <h3>Акции</h3>
+            <p>Могут быть крупные потери во время кризиса</p>
+            <p>Акции компании могут упасть в цене</p>
+            <div class="limitations__minus limitations__minus--blue">
+              -
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <section class="container invest">
+      <div class="container">
+        <div class="row">
+          <h2 class="invest__header">Инвестировать в ценные бумаги куда выгоднее, чем во франшизу</h2>
+        </div>
+        <div class="row">
+          <div class="col invest__bg1">
+            <p class="invest__desc">Во-первых, это приносит больше прибыли. </p>
+          </div>
+          <div class="col  invest__bg2">
+            <p class="invest__desc">Во-вторых, убережет ваши нервы 
+              от ненужной “волокиты” и множества дополнительных проблем. 
+              </p>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
