@@ -1,0 +1,117 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 463px;
+    height: 500px;
+    background: $white;
+    box-shadow: -10px 10px 40px rgba(67, 67, 67, 0.1);
+    border-radius: 5px;
+    transition: 0.5s;
+
+    &__inputs {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__input {
+        width: 366px;
+        height: 60px;
+        background: $white;
+        box-shadow: -10px 10px 40px rgba(67, 67, 67, 0.1);
+        border-radius: 5px;
+        border: none;
+        margin-bottom: 15px;
+        transition: 1s;
+    }
+
+    &__input::placeholder {
+        font-family: "Roboto", sans-serif;
+        font-size: 16px;
+        line-height: 19px;
+        color: #CCCCCC;
+        padding-left: 54px;
+      }
+
+    &__header {
+        font-family: "Open Sans", sans-serif;
+        font-size: 20px;
+        line-height: 35px;
+        text-align: center;
+        color: $blue;
+        margin-top: 28px;
+        margin-bottom: 46px;
+    }
+
+    &__input--user-img {
+        background: url(../images/User.svg) no-repeat 5% 50%;
+    }
+    
+      &__input--email-img {
+        background: url(../images/email.svg) no-repeat 5% 50%;
+    }
+    
+      &__input--phone-img {
+        background: url(../images/phone.svg) no-repeat 5% 50%;
+    }
+
+    &__button {
+        width: 366px;
+        height: 70px;
+        background: $blue;
+        box-shadow: 15px 5px 20px rgba(0, 80, 92, 0.15);
+        border-radius: 5px;
+        border: none;
+        font-family: "Open Sans", sans-serif;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 150%;
+        text-align: center;
+        text-transform: uppercase;
+        color: $white;
+        transition: 1s;
+    }
+
+    &__button:hover {
+        transform: scale(1.05);
+    }
+
+    @media screen and(max-width: 414px) {
+        &__input,
+        &__button {
+            width: 290px;
+        }
+
+        &__header {
+            margin-bottom: 30px;
+        }
+    }
+
+    @media screen and(max-width: 320px) {
+        &__input,
+        &__button{
+            width: 270px;
+        }
+    }
+}
+
+.form:hover {
+    box-shadow: -20px 20px 50px rgba(67, 67, 67, 0.1);
+}
+
+@media screen and(max-width: 1024px) {
+    .form {
+        margin-left: 0;
+    }
+}
+@media screen and(max-width: 414px) {
+    .form {
+        width: 345px;
+    }
+}
+@media screen and(max-width: 320px) {
+    .form {
+        width: 300px;
+    }
+}

@@ -1,0 +1,43 @@
+.shares {
+    min-width: 100%;
+
+    &__bg {
+        margin-top: 100px;
+        background: $gray;
+        padding: 31px 30px;
+    }
+
+    &__header {
+        font-family: "Roboto",sans-serif;
+        font-weight: 900;
+        font-size: 54px;
+        line-height: 54px;
+        color: $black;
+        margin-bottom: 44px;
+    }
+
+    &__desc {
+        font-family: "Open Sans",sans-serif;
+        font-size: 20px;
+        line-height: 35px;
+        color: $black;
+    }
+
+    @media screen and(max-width: 414px) {
+     &__header {
+            text-align: center;
+            font-size: 44px;
+        }
+
+        &__bg {
+            margin-top: 40px;
+        }
+
+    }
+
+    @media screen and(max-width: 320px) {
+        &__header {
+               font-size: 38px;
+           }
+       }
+}

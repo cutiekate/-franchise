@@ -1,0 +1,64 @@
+.species {
+    min-width: 100%;
+
+    &__header {
+        font-family: "Roboto",sans-serif;
+        font-weight: 900;
+        font-size: 44px;
+        line-height: 44px;
+        letter-spacing: 0.06em;
+        color: $black;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        padding-left: 30px;
+    }
+
+    &__desc1 {
+        margin-left: 20px;
+        background: url('../images/01-blue.svg') no-repeat 2% top;
+    }
+    &__desc2 {
+        margin-left: 20px;
+        background: url('../images/02-blue.svg') no-repeat 2% top;
+    }
+
+    &__text {
+        padding-top: 60px;
+        font-family: "Open Sans", sans-serif;
+        font-size: 20px;
+        line-height: 35px;
+        color: $black;
+    }
+
+    &__text span {
+        font-weight: bold;
+    }
+
+    &__img {
+        margin-bottom: 10px;
+        width: 100%;
+        height: auto;
+    }
+
+    @media screen and(max-width: 1024px) {
+        &__img {
+               margin-top: 20px;
+        }
+    }
+    @media screen and(max-width: 768px) {
+        &__desc1,
+        &__desc2 {
+               min-width: 100%;
+        }
+    }
+    @media screen and(max-width: 375px) {
+        &__header {
+            font-size: 38px;
+        }
+    }
+    @media screen and(max-width: 320px) {
+        &__header {
+            font-size: 30px;
+        }
+    }
+}
