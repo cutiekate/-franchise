@@ -15,11 +15,11 @@
 
     &__desc1 {
         margin-left: 20px;
-        background: url('../images/01-blue.svg') no-repeat 2% top;
+        background: url('../images/01-blue.svg') no-repeat 7% top;
     }
     &__desc2 {
         margin-left: 20px;
-        background: url('../images/02-blue.svg') no-repeat 2% top;
+        background: url('../images/02-blue.svg') no-repeat 7% top;
     }
 
     &__text {
@@ -49,6 +49,7 @@
         &__desc1,
         &__desc2 {
                min-width: 100%;
+               margin-left: 0;
         }
     }
     @media screen and(max-width: 375px) {

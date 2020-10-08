@@ -46,6 +46,7 @@
     }
     &__blue {
         background: rgba(0, 80, 92, 0.85);
+        overflow: hidden;
     }
 
     &__red h3,
@@ -107,14 +108,22 @@
 
        &__red h3,
        &__blue h3 {
+        font-size: 30px;
         margin-top: 30px;
         margin-bottom: 30px;
+       }
+
+       &__red p,
+       &__blue p {
+        font-size: 18px;
+        line-height: 25px;
        }
 
     }
     @media screen and(max-width: 320px) {
         &__header {
-            font-size: 32px;
+            font-size: 30px;
+            margin-top: 45px;
         }
      }
 }
