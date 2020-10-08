@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="RU">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Акции/Франшиза</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./scripts/animate.min.css">
   </head>
   <body>
-    <header class="container header">
+    <header class="header">
       <div class="header__bg">
         <div class="header__img1"></div>
         <div class="header__img2"></div>
@@ -16,14 +17,14 @@
       <div class="container header__content">
         <div class="row">
           <div class="col header__content-col">
-            <h1 class="header__head"><span class="red">Франшиза</span> v/s <span class="blue">Акции</span>
+            <h1 class="header__head wow fadeInLeft"><span class="red">Франшиза</span> v/s <span class="blue">Акции</span>
               На чем выгоднее зарабатывать?</h1>
-              <p class="header__desc">Бизнес по франшизе стал довольно популярен 
+              <p class="header__desc wow fadeInLeft" data-wow-delay="0.1s">Бизнес по франшизе стал довольно популярен 
                 в последнее время. Сегодня мы сравним, что выгоднее, инвестирование в акции 
                 или открытие франшизы.</p>
           </div>
           <div class="col header__content-col">
-            <form class=" header__form form">
+            <form class="header__form form wow fadeInRight">
               <h3 class="form__header">Заполните короткую форму 
                 и наслаждайтесь пассивным заработком
               </h3>
@@ -114,16 +115,16 @@
 
       </div>
     </header>
-    <section class="container franchise">
+    <section class="franchise">
       <div class="container">
         <div class="row franchise__bg">
-          <h2 class="franchise__header">Франшиза</h2>
+          <h2 class="franchise__header wow fade">Франшиза</h2>
           <p class="franchise__desc">Франшиза - своего рода, это договор между фирмой и клиентом на приобретение последним, права использовать название и продукцию компании. В зависимости от условий договора, бренд может помочь с обучением, наймом персонала, оборудованием и прочим. </p>
         </div>
 
       </div>
     </section>
-    <section class="container popular">
+    <section class="popular">
       <div class="container">
         <div class="row">
           <h2 class="popular__header">Самые популярные виды франшиз:</h2>
@@ -158,7 +159,7 @@
         </div>
       </div>
     </section>
-    <section class="container shares">
+    <section class="shares">
       <div class="container">
         <div class="row shares__bg">
           <h2 class="shares__header">Акции компаний</h2>
@@ -166,7 +167,7 @@
         </div>
       </div>
     </section>
-    <section class="container species">
+    <section class="species">
       <div class="container">
         <div class="row">
           <h3 class="species__header">Виды акций:</h3>
@@ -190,7 +191,7 @@
         
       </div>
     </section>
-    <section class="container benefits">
+    <section class="benefits">
       <div class="container">
         <div class="row">
           <h2 class="benefits__header">Преимущества</h2>
@@ -250,7 +251,7 @@
 
       </div>
     </section>
-    <section class="container invest">
+    <section class="invest">
       <div class="container">
         <div class="row">
           <h2 class="invest__header">Инвестировать в ценные бумаги куда выгоднее, чем во франшизу</h2>
@@ -267,10 +268,140 @@
         </div>
       </div>
     </section>
+    <section class="specialist">
+      <div class="container">
+        <div class="row">
+          <div class="col header__content-col">
+            <h2 class="specialist__header">Наши специалисты могут помочь вам начать вкладываться 
+              в акции уже сейчас</h2>
+              <p class="specialist__desc"> 
+                Вам предоставят не только грамотную консультацию (ответы на все ваши вопросы), 
+                но и подскажут самые прибыльные ценные бумаги. </p>
+          </div>
+          <div class="col header__content-col">
+            <form class="header__form form specialist__form">
+              <h3 class="form__header">Заполните короткую форму 
+                и наслаждайтесь пассивным заработком
+              </h3>
+              <div class="form__inputs">
+                <input
+                class="form__input form__input--user-img"
+                type="text" id="name-3"
+                placeholder="Введите имя"
+                required>
+                <span class="msg-help-3 name-span-3" style="display:none;">Укажите имя, что бы мы знали как обращаться к Вам</span>
+                <input
+                class="form__input form__input--email-img"
+                type="email" id="mail-3"
+                placeholder="E-mail"
+                pattern="^[-._A-Za-z0-9]+@(?:[a-z0-9][-a-z0-9]+\.)+[a-z]{2,6}$"
+                required>
+                <span class="msg-help-3 mail-span-3" style="display:none;">Укажите Ваш реальный Email для отправки списка</span>
+                <input
+                type="hidden"
+                id="last_name-3"
+                value=" ">
+                <input
+                type="hidden"
+                id="ip-3"
+                value="<?= $_SERVER['REMOTE_ADDR']; ?>">
+                <input
+                type="hidden"
+                id="country-3"
+                value="">
+                <input
+                type="hidden"
+                id="prefix-3"
+                value="">
+                <input
+                type="hidden"
+                id="lang-3"
+                value="RU">
+                <input
+                type="hidden"
+                name="utm_source"
+                id="utm_source-3"
+                value="<?= $_GET['utm_source']; ?>">
+                <input
+                type="hidden"
+                name="utm_medium"
+                id="utm_medium-3"
+                value="<?=  $_GET['utm_medium']; ?>">
+                <input
+                type="hidden"
+                name="utm_campaign"
+                id="utm_campaign-3"
+                value="<?= $_GET['utm_campaign']; ?>">
+                <input
+                type="hidden"
+                name="utm_term"
+                id="utm_term-3"
+                value="<?= $_GET['utm_term'];?>">
+                <input
+                type="hidden"
+                id="utm_content-3"
+                value="<?= $_GET['utm_content']; ?>">
+                <label for="phone-3">
+                  <input
+                  class="form__input form__input--phone-img"
+                  type="tel"
+                  placeholder="Телефон"
+                  id="phone-3"
+                  maxlength="16"
+                  required>
+                  <span class="msg-help-3 tel-span-3" style="display:none;">Укажите номер в международном формате</span>
+                  <span id="error-msg-3" class="hide"></span>
+                </label>
+              </div>
+              <div>
+                  <button
+                  class="form__button"
+                  type="submit"
+                  id="button-3"
+                  class="sub btn_yellow">
+                      <span>СКАЧАТЬ БЕСПЛАТНО</span>
+                  </button>
+                  <p class="msg"></p>
+              </div>
+          </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col footer__col1">
+            <p class="footer__text">Франшиза vs. Ценные бумаги:<br>
+              На чем выгоднее зарабатывать?
+              </p>
+          </div>
+          <div class="col footer__col2">
+            <p class="footer__text">Получите консультацию по телефону!</p>
+            <div class="footer__tel--bg">
+              <a href="tel:+7 495 009-04-67"><img src="images/tel-icon.svg"></a>
+              <a class="footer__tel" href="tel:+7 495 009-04-67">+7 495 009-04-67</a>
+            </div>
+            <p class="footer__text">с 10:00 до 19:00 Пн-Пт</p>
+          </div>
+        </div>
+        <div class="row footer__line"></div>
+        <div class="row">
+          <div class="col">
+            <a href="#"><p class="footer__text footer__rights">© 2020. Все права защищены.</p></a>
+          </div>
+          <div class="col">
+            <a class="footer__politics--block" href="#"><p class="footer__text footer__politics">Политика конфиденциальности</p></a>
+          </div>
+        </div>
+      </div>
+     
+    </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+   <script src="scripts/wow.js"></script>
     <script type="text/javascript" src="scripts/main.js"></script>
   </body>
 </html>
