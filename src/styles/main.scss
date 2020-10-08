@@ -14,8 +14,9 @@
 @import "footer";
 
 
-body {
+body,html {
  background: $white;
+ overflow-x: hidden;
 }
 
 .red {
@@ -25,3 +26,64 @@ body {
 .blue {
   color: $blue;
 }
+
+.vs {
+  letter-spacing: -0.09em;
+  position: relative;
+}
+
+.vs:after {
+  content: " ";
+  display: inline-block;
+  width: 20px;
+  height: 50px;
+  background: url("../images/vs.svg") no-repeat;
+  position: absolute;
+  top: 16px;
+  left: 60%;
+  transform: translate(-60%, 0);
+}
+
+@media screen and(max-width: 1024px) {
+  .col-7 {
+    max-width: 48.333333%;
+  }
+}
+
+@media screen and(max-width: 768px) {
+  .vs:after {
+    height: 40px;
+  }
+}
+
+@media screen and(max-width: 414px) {
+  .vs {
+    letter-spacing: -0.01em;
+  }
+  .vs:after {
+    width: 21px;
+    height: 24px;
+    top: 12px;
+    left: 54%;
+  }
+}
+
+@media screen and(max-width: 375px) {
+  .vs:after {
+    width: 21px;
+    height: 27px;
+    top: 13px;
+    left: 57%;
+}
+}
+
+@media screen and(max-width: 320px) {
+  .vs:after {
+    width: 21px;
+    height: 22px;
+    top: 13px;
+    left: 52%;
+  }
+}
+
+
