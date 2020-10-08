@@ -76,11 +76,13 @@ h1 {
   @media screen and (max-width: 414px) {
     .header__head {
       font-size: 30px;
+      line-height: 44px;
       text-align: center; }
     .header__content {
       margin-top: -645px; }
     .header__desc {
-      font-size: 19px; } }
+      font-size: 19px;
+      line-height: 37px; } }
   @media screen and (max-width: 375px) {
     .header__head {
       font-size: 35px; } }
@@ -400,7 +402,6 @@ h1 {
   margin: 100px auto 40px; }
 
 .benefits__img {
-  margin-left: -250px;
   padding-right: 0; }
 
 .benefits__img img {
@@ -499,7 +500,6 @@ h1 {
   margin: 100px auto 60px; }
 
 .limitations__img {
-  margin-left: -250px;
   padding-right: 0; }
 
 .limitations__img img {
@@ -625,7 +625,10 @@ h1 {
 
 @media screen and (max-width: 768px) {
   .invest__header {
-    font-size: 43px; } }
+    font-size: 43px;
+    margin-top: 60px; }
+  .invest__desc {
+    margin-bottom: 80px; } }
 
 @media screen and (max-width: 414px) {
   .invest__header {
@@ -644,45 +647,47 @@ h1 {
   .invest__header {
     line-height: 43px; } }
 
-.specialist__header {
-  font-family: "Roboto",sans-serif;
-  font-weight: bold;
-  font-size: 54px;
-  line-height: 55px;
-  letter-spacing: 0.06em;
-  color: #000000;
-  margin-top: 111px;
-  margin-bottom: 30px; }
-
-.specialist__desc {
-  font-family: "Open Sans", sans-serif;
-  font-size: 24px;
-  line-height: 35px;
-  margin-bottom: 110px; }
-
-.specialist__form {
-  margin-top: 100px;
-  margin-bottom: 50px; }
-
-@media screen and (max-width: 1024px) {
+.specialist {
+  background: #F5F5F5; }
   .specialist__header {
-    margin-top: 50px;
-    font-size: 45px; } }
-
-@media screen and (max-width: 414px) {
-  .specialist__header {
-    font-size: 30px;
-    line-height: 49px; }
+    font-family: "Roboto",sans-serif;
+    font-weight: bold;
+    font-size: 53px;
+    line-height: 55px;
+    letter-spacing: 0.06em;
+    color: #000000;
+    margin-top: 111px;
+    margin-bottom: 30px; }
   .specialist__desc {
-    font-size: 18px;
-    margin-bottom: 0; }
+    font-family: "Open Sans", sans-serif;
+    font-size: 24px;
+    line-height: 35px;
+    margin-bottom: 110px; }
   .specialist__form {
-    margin-top: 50px; } }
-
-@media screen and (max-width: 375px) {
-  .specialist__header {
-    font-size: 27px;
-    line-height: 41px; } }
+    margin-top: 50px;
+    margin-bottom: 50px; }
+  @media screen and (max-width: 1024px) {
+    .specialist__header {
+      margin-top: 50px;
+      font-size: 39px; } }
+  @media screen and (max-width: 768px) {
+    .specialist__desc {
+      margin-bottom: 50px; }
+    .specialist__header {
+      text-align: center; } }
+  @media screen and (max-width: 414px) {
+    .specialist__header {
+      font-size: 30px;
+      line-height: 49px; }
+    .specialist__desc {
+      font-size: 18px;
+      margin-bottom: 0; }
+    .specialist__form {
+      margin-top: 50px; } }
+  @media screen and (max-width: 375px) {
+    .specialist__header {
+      font-size: 27px;
+      line-height: 41px; } }
 
 .footer {
   min-width: 100%;
