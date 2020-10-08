@@ -74,6 +74,7 @@
     @media screen and(max-width: 414px) {
         &__head {
             font-size: 30px;
+            line-height: 44px;
             text-align: center;
         }
         &__content {
@@ -82,6 +83,7 @@
 
         &__desc {
             font-size: 19px;
+            line-height: 37px;
         }
     }
     @media screen and(max-width: 375px) {

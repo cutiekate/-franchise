@@ -34,6 +34,11 @@
     @media screen and(max-width: 768px) {
         &__header {
             font-size: 43px;
+            margin-top: 60px;
+        }
+
+        &__desc {
+            margin-bottom: 80px;
         }
     }
 

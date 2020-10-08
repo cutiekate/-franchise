@@ -1,8 +1,10 @@
 .specialist {
+    background: $gray;
+    
     &__header {
         font-family: "Roboto",sans-serif;
         font-weight: bold;
-        font-size: 54px;
+        font-size: 53px;
         line-height: 55px;
         letter-spacing: 0.06em;
         color: $black;
@@ -17,14 +19,24 @@
     }
 
     &__form {
-        margin-top: 100px;
+        margin-top: 50px;
         margin-bottom: 50px;
     }
 
     @media screen and(max-width: 1024px) {
         &__header {
             margin-top: 50px;
-            font-size: 45px;
+            font-size: 39px;
+        }
+    }
+
+    @media screen and(max-width: 768px) {
+        &__desc {
+            margin-bottom: 50px;
+        }
+
+        &__header {
+            text-align: center;
         }
     }
 
