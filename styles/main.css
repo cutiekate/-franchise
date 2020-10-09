@@ -128,6 +128,7 @@ h1 {
   .form__input {
     width: 366px;
     height: 60px;
+    padding-left: 47px;
     background: #FFFFFF;
     -webkit-box-shadow: -10px 10px 40px rgba(67, 67, 67, 0.1);
             box-shadow: -10px 10px 40px rgba(67, 67, 67, 0.1);
@@ -141,31 +142,41 @@ h1 {
     font-size: 16px;
     line-height: 19px;
     color: #CCCCCC;
-    padding-left: 54px; }
+    padding-left: 10px; }
   .form__input::-moz-placeholder {
     font-family: "Roboto", sans-serif;
     font-size: 16px;
     line-height: 19px;
     color: #CCCCCC;
-    padding-left: 54px; }
+    padding-left: 10px; }
   .form__input:-ms-input-placeholder {
     font-family: "Roboto", sans-serif;
     font-size: 16px;
     line-height: 19px;
     color: #CCCCCC;
-    padding-left: 54px; }
+    padding-left: 10px; }
   .form__input::-ms-input-placeholder {
     font-family: "Roboto", sans-serif;
     font-size: 16px;
     line-height: 19px;
     color: #CCCCCC;
-    padding-left: 54px; }
+    padding-left: 10px; }
   .form__input::placeholder {
     font-family: "Roboto", sans-serif;
     font-size: 16px;
     line-height: 19px;
     color: #CCCCCC;
-    padding-left: 54px; }
+    padding-left: 10px; }
+  .form__input:last-child::-webkit-input-placeholder {
+    padding-left: 5px; }
+  .form__input:last-child::-moz-placeholder {
+    padding-left: 5px; }
+  .form__input:last-child:-ms-input-placeholder {
+    padding-left: 5px; }
+  .form__input:last-child::-ms-input-placeholder {
+    padding-left: 5px; }
+  .form__input:last-child::placeholder {
+    padding-left: 5px; }
   .form__header {
     font-family: "Open Sans", sans-serif;
     font-size: 20px;
@@ -202,12 +213,16 @@ h1 {
             transform: scale(1.05); }
   @media screen and (max-width: 414px) {
     .form__input, .form__button {
-      width: 290px; }
+      width: 310px; }
     .form__header {
-      margin-bottom: 30px; } }
+      margin-bottom: 30px;
+      font-size: 15px; } }
   @media screen and (max-width: 320px) {
     .form__input, .form__button {
-      width: 270px; } }
+      width: 270px; }
+    .form__header {
+      margin-bottom: 10px;
+      margin-top: 10px; } }
 
 .form:hover {
   -webkit-box-shadow: -20px 20px 50px rgba(67, 67, 67, 0.1);
@@ -223,7 +238,155 @@ h1 {
 
 @media screen and (max-width: 320px) {
   .form {
-    width: 300px; } }
+    width: 300px;
+    margin-top: 0; } }
+
+form {
+  padding: 20px; }
+
+form .iti {
+  width: 100%;
+  margin-bottom: 20px; }
+
+form .iti__country-list {
+  max-width: 250px;
+  overflow-x: hidden; }
+
+form .iti__country-list {
+  max-width: 400px;
+  top: 60px; }
+
+form .iti--allow-dropdown .iti__flag-container {
+  left: 0px; }
+
+form label {
+  position: relative;
+  width: 100%;
+  margin-bottom: 0px; }
+
+form #error-msg-1,
+form #valid-msg-1,
+form #error-msg-2,
+form #valid-msg-2,
+form #error-msg-3,
+form #valid-msg-3 {
+  position: absolute;
+  right: 10px;
+  top: 27px;
+  font-size: 12px;
+  color: #195B84; }
+
+form #error-msg-1,
+form #error-msg-2,
+form #error-msg-3 {
+  color: #195B84; }
+
+form #valid-msg-1,
+form #valid-msg-2,
+form #valid-msg-3 {
+  color: #00C900; }
+
+form .hide {
+  display: none; }
+
+form .msg-help-1,
+form .msg-help-2,
+form .msg-help-3 {
+  font-size: 14px;
+  position: relative;
+  top: -10px;
+  text-align: center;
+  color: #195B84; }
+
+form .form-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+form button {
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 auto;
+  text-transform: uppercase;
+  padding: 15px 50px;
+  -webkit-box-shadow: 15px 5px 20px rgba(45, 175, 215, 0.2);
+          box-shadow: 15px 5px 20px rgba(45, 175, 215, 0.2);
+  border-radius: 5px;
+  border: none;
+  margin-bottom: 20px;
+  font-weight: bold; }
+
+form button span img {
+  width: 20px;
+  height: 20px; }
+
+form .msg {
+  text-align: center;
+  font-size: 14px;
+  position: relative;
+  top: 10px;
+  color: #195B84; }
+
+form .form-control {
+  margin-bottom: 15px; }
+
+form h3 {
+  font-size: 22px;
+  line-height: 26px;
+  text-align: center;
+  margin-bottom: 20px; }
+
+form h4 {
+  font-weight: 400;
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 30px; }
+
+form input,
+form label {
+  max-width: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+form input {
+  color: rgba(59, 87, 148, 0.6);
+  margin-bottom: 25px;
+  height: 65px;
+  background: #FFFFFF;
+  border: 2px solid #E2E2E2;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 5px; }
+
+form button {
+  max-width: 100%;
+  width: 100%;
+  padding: 25px 0;
+  color: #ffffff; }
 
 .franchise__bg {
   margin-top: 93px;
@@ -254,7 +417,9 @@ h1 {
 
 @media screen and (max-width: 375px) {
   .franchise__header {
-    font-size: 42px; } }
+    font-size: 42px; }
+  .franchise__bg {
+    margin-top: 35px; } }
 
 @media screen and (max-width: 320px) {
   .franchise__header {
@@ -467,7 +632,8 @@ h1 {
 
 @media screen and (max-width: 414px) {
   .benefits__header {
-    font-size: 38px; }
+    font-size: 38px;
+    margin-top: 70px; }
   .benefits__red, .benefits__blue {
     min-width: 100%; }
   .benefits__plus {
@@ -687,7 +853,10 @@ h1 {
   @media screen and (max-width: 375px) {
     .specialist__header {
       font-size: 27px;
-      line-height: 41px; } }
+      line-height: 41px; }
+    .specialist__form {
+      margin-top: 10px;
+      margin-bottom: 10px; } }
 
 .footer {
   min-width: 100%;
