@@ -18,6 +18,7 @@
     &__input {
         width: 366px;
         height: 60px;
+        padding-left: 47px;
         background: $white;
         box-shadow: -10px 10px 40px rgba(67, 67, 67, 0.1);
         border-radius: 5px;
@@ -31,7 +32,11 @@
         font-size: 16px;
         line-height: 19px;
         color: #CCCCCC;
-        padding-left: 54px;
+        padding-left: 10px;
+      }
+
+      &__input:last-child::placeholder {
+          padding-left: 5px;
       }
 
     &__header {
@@ -80,11 +85,12 @@
     @media screen and(max-width: 414px) {
         &__input,
         &__button {
-            width: 290px;
+            width: 310px;
         }
 
         &__header {
             margin-bottom: 30px;
+            font-size: 15px;
         }
     }
 
@@ -92,6 +98,11 @@
         &__input,
         &__button{
             width: 270px;
+        }
+
+        &__header {
+            margin-bottom: 10px;
+            margin-top: 10px;
         }
     }
 }
@@ -113,5 +124,135 @@
 @media screen and(max-width: 320px) {
     .form {
         width: 300px;
+        margin-top: 0;
     }
 }
+
+
+form {
+    padding: 20px;
+  }
+  form .iti {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  form .iti__country-list {
+    max-width: 250px;
+    overflow-x: hidden;
+  }
+  form .iti__country-list {
+    max-width: 400px;
+    top: 60px;
+  }
+
+  form .iti--allow-dropdown .iti__flag-container {
+    left: 0px;
+  }
+  form label {
+    position: relative;
+    width: 100%;
+    margin-bottom: 0px;
+  }
+  form #error-msg-1,
+  form #valid-msg-1,
+  form #error-msg-2,
+  form #valid-msg-2,
+  form #error-msg-3,
+  form #valid-msg-3 {
+    position: absolute;
+    right: 10px;
+    top: 27px;
+    font-size: 12px;
+    color: #195B84;
+  }
+  form #error-msg-1,
+  form #error-msg-2,
+  form #error-msg-3 {
+    color: #195B84;
+  }
+  form #valid-msg-1,
+  form #valid-msg-2,
+  form #valid-msg-3 {
+    color: #00C900;
+  }
+  form .hide {
+    display: none;
+  }
+  form .msg-help-1,
+  form .msg-help-2,
+  form .msg-help-3 {
+    font-size: 14px;
+    position: relative;
+    top: -10px;
+    text-align: center;
+    color: #195B84;
+  }
+  form .form-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  form button {
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    text-transform: uppercase;
+    padding: 15px 50px;
+    box-shadow: 15px 5px 20px rgba(45, 175, 215, 0.2);
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  form button span img {
+    width: 20px;
+    height: 20px;
+  }
+  form .msg {
+    text-align: center;
+    font-size: 14px;
+    position: relative;
+    top: 10px;
+    color: #195B84;
+  }
+  form .form-control {
+    margin-bottom: 15px;
+  }
+  form h3 {
+    font-size: 22px;
+    line-height: 26px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  form h4 {
+    font-weight: 400;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  form input,
+  form label {
+    max-width: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  form input {
+    color: rgba(59, 87, 148, 0.6);
+    margin-bottom: 25px;
+    height: 65px;
+    background: #FFFFFF;
+    border: 2px solid #E2E2E2;
+    box-sizing: border-box;
+    border-radius: 5px;
+  }
+  form button {
+    max-width: 100%;
+    width: 100%;
+    padding: 25px 0;
+    color: #ffffff;
+  }
+  

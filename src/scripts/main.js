@@ -83,7 +83,7 @@ $(document).ready(function () {
             $('#form-'+id+' .msg').text(name_error);
             btn.prop("disabled", false);
             btn.css('opacity', '1');
-            $('button.sub span').html('<img src="img/load.gif">');
+            $('button.sub span').html('<img src="./images/load.gif">');
         },1000);
         setTimeout(function () {
             $('button.sub span').html('Получить');
@@ -107,7 +107,7 @@ $(document).ready(function () {
             }else{
                 document.cookie = "user_name="+$('#form-'+id+' #name-'+id).val();
                 $(this).find('button').prop("disabled", true);
-                $('button.sub span').html('<img src="img/load.gif">');
+                $('button.sub span').html('<img src="./images/load.gif">');
                 btn.css('opacity', '0.8');
                 setTimeout(function () {
                     btn.css('opacity', '1');
@@ -141,4 +141,147 @@ $(document).ready(function () {
     }
 
     submitForm(3);
+});
+
+
+$(document).ready(function () {
+    $('#name-2').focus(function() {
+        $('.msg-help-2').css('display', 'none');
+        $('.name-span-2').css('display', 'inline');
+    });
+  
+    $('#phone-2').on('click', function() {
+        var countryData = iti2.getSelectedCountryData().dialCode;
+        $('#prefix-2').val(countryData);
+        if($('#phone-2').val()==""){
+            $(this).val("+"+countryData);
+        }
+        if($('#phone-2').val()==""){
+            $(this).val("+");
+        }
+        $('.msg-help-2').css('display', 'none');
+        $('.tel-span-2').css('display', 'inline');
+    });
+
+    $('#form-2').disableAutoFill();
+  
+    $.get("https://ipinfo.io?token=a1676089e9b822", function(response) {
+        $('#country-2').val(response.country);
+    }, "jsonp");
+
+    var input2 = document.querySelector("#phone-2"),
+        errorMsg2 = document.querySelector("#error-msg-2"),
+        validMsg2 = document.querySelector("#valid-msg-2"),
+        errorMap = ["Ошибка в номере", "Неправильный код страны", "Продолжайте ввод...", "Слишком много символов", "Продолжайте ввод..."],
+        iti2 = window.intlTelInput(input2, {
+            initialCountry: "auto",
+            defaultCountry: 'auto',
+            nationalMode: false,
+            geoIpLookup: function(success, failure) {
+                $.get("https://ipinfo.io?token=a1676089e9b822", function() {}, "jsonp").always(function(resp) {
+                    var countryCode = (resp && resp.country) ? resp.country : "";
+                    success(countryCode);
+                });
+            },
+            utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.5/js/utils.js"
+        }),
+        btn = $('button.sub');
+
+        var reset = function() {
+            input2.classList.remove("error");
+            errorMsg2.classList.add("hide");
+            validMsg2.classList.add("hide");
+        };
+
+
+ 
+    $('#phone-2').on('keyup',function () {
+        $(this).max = 16;
+        reset();
+        if (input2.value.trim()) {
+            if (iti2.isValidNumber()) {
+                validMsg2.classList.remove("hide");
+            } else {
+                var errorCode = iti2.getValidationError();
+                
+                if(errorCode=='-99'){
+                    errorMsg2.innerHTML = errorMap[2];
+                }else{
+                    errorMsg2.innerHTML = errorMap[errorCode];
+                }
+                errorMsg2.classList.remove("hide");
+            }
+        }
+    });
+  
+      $('#mail-2').focus(function() {
+        $('.msg-help-2').css('display', 'none');
+        $('.mail-span-2').css('display', 'inline');
+      });
+  
+    function errores (id, name_error){
+        btn.prop("disabled", true);
+        btn.css('opacity', '0.8');
+        setTimeout(function () {
+            $('#form-'+id+' .msg').text(name_error);
+            btn.prop("disabled", false);
+            btn.css('opacity', '2');
+            $('button.sub span').html('<img src="./images/load.gif">');
+        },1000);
+        setTimeout(function () {
+            $('button.sub span').html('Получить');
+            $('#form-'+id+' .msg').text('');
+        },2000);
+    }
+
+    function submitForm(id){
+        $("#form-"+id).on('submit',function (e) {
+            e.preventDefault();
+            let input_name = $('#form-'+id+' #name-'+id).val(),
+                input_mail = $('#form-'+id+' #mail-'+id).val(),
+                reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+
+            if(input_name==''){
+                errores(id,'Укажите Ваше имя!');
+            }else if (iti2.isValidNumber()==false) {
+                errores(id,'Укажите номер в международном формате');
+            }else if(input_mail==''||reg.test(input_mail) == false){
+                errores(id, 'Укажите Ваш Email!');
+            }else{
+                document.cookie = "user_name="+$('#form-'+id+' #name-'+id).val();
+                $(this).find('button').prop("disabled", true);
+                $('button.sub span').html('<img src="./images/load.gif">');
+                btn.css('opacity', '0.8');
+                setTimeout(function () {
+                    btn.css('opacity', '1');
+                    $.ajax({
+                        type: "POST",
+                        url: "send.php", 
+                        data: {
+                            first_name: $('#form-'+id+' #name-'+id).val(),
+                            last_name: $('#form-'+id+' #last_name-'+id).val(),
+                            email: $('#form-'+id+' #mail-'+id).val(),
+                            phone: $('#form-'+id+' #phone-'+id).val(),
+                            prefix: $('#form-'+id+' #prefix-'+id).val(),
+                            country: $('#form-'+id+' #country-'+id).val(),
+                            language: $('#form-'+id+' #lang-'+id).val(),
+                            utm_source: $('#form-'+id+' #utm_source-'+id).val(),
+                            utm_medium: $('#form-'+id+' #utm_medium-'+id).val(),
+                            utm_campaign: $('#form-'+id+' #utm_campaign-'+id).val(),
+                            utm_term: $('#form-'+id+' #utm_term-'+id).val(),
+                            utm_content: $('#form-'+id+' #utm_content-'+id).val(),
+                            comment: $('#form-'+id+' #description-'+id).val(),
+                            ip: $('#form-'+id+' #ip-'+id).val(),
+                        },
+                        success: function() {
+                            $('button.sub').html('Отправлено ✓');
+                            window.location.href = 'success.php';
+                        }
+                    });
+                },1000);
+            }
+        });
+    }
+
+    submitForm(2);
 });
